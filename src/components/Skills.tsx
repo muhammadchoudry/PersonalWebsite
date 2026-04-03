@@ -51,12 +51,12 @@ export default function Skills() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' as const } },
   };
 
   const tagVariants = {
     hidden: { opacity: 0, scale: 0.85 },
-    show: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
+    show: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: 'easeOut' as const } },
   };
 
   return (

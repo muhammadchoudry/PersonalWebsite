@@ -156,7 +156,7 @@ function TimelineEntry({
     <motion.div
       initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
+      transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' as const }}
       className={`relative flex flex-col md:flex-row items-start gap-6 ${
         isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
@@ -190,7 +190,7 @@ function TimelineEntry({
       <div className="hidden md:flex w-2/12 justify-center items-start pt-6">
         <div
           className="w-4 h-4 rounded-full border-2 border-navy ring-4"
-          style={{ backgroundColor: node.color, ringColor: node.color, boxShadow: `0 0 0 4px ${node.color}30` }}
+          style={{ backgroundColor: node.color, boxShadow: `0 0 0 4px ${node.color}30` }}
         />
       </div>
 
